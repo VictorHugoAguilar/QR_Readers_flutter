@@ -51,7 +51,13 @@ Until this is fixed in CocoaPods, you can add the following to your Podfile as a
             path_provider: ^1.6.24
     ````
 
+- [url_launcher 5.7.10](https://pub.dev/packages/url_launcher)
 
+    ````
+     dependencies:
+        url_launcher: ^5.7.10
+    ````
+    
 
 ## Getting Started
 
