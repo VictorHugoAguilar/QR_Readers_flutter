@@ -1,6 +1,10 @@
-# qrreaders
+# QR-READER
 
-A new Flutter project.
+Proyecto de aplicación para escaneos de códigos QR, utilizando la cámara del dispositivo,
+luego insertandolos en BDLite para llevar un historico, en el cual podemos modificar, eliminar uno
+especifico o todos los historicos.
+La lectura de códigos podrán ser URLs, o Geoubicaciones que nos ubicarán en un mapa.
+
 
 ## Depencencias utilizadas y configuraciones especificas
 
@@ -38,14 +42,14 @@ Until this is fixed in CocoaPods, you can add the following to your Podfile as a
     ````
        dependencies:
             sqflite: ^1.3.0
-    `````
+    ````
 
 - [path_provider 1.6.24](https://pub.dev/packages/path_provider)
 
     ````
       dependencies:
             path_provider: ^1.6.24
-    `````
+    ````
 
 
 
@@ -61,4 +65,5 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
 # QR_Readers_flutter
