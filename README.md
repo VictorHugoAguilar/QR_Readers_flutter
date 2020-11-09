@@ -5,6 +5,10 @@ luego insertandolos en BDLite para llevar un historico, en el cual podemos modif
 especifico o todos los historicos.
 La lectura de códigos podrán ser URLs, o Geoubicaciones que nos ubicarán en un mapa.
 
+## Capturas
+
+
+
 
 ## Depencencias utilizadas y configuraciones especificas
 
