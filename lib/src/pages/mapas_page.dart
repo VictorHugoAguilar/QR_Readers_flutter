@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qrreader/src/bloc/scan_bloc.dart';
 import 'package:qrreader/src/models/scan_model.dart';
-import 'package:qrreader/src/providers/db_provider.dart';
-import 'package:flutter/src/widgets/unique_widget.dart';
 
 import 'package:qrreader/src/utils/utils.dart' as utils;
 
@@ -11,6 +9,7 @@ class MapasPages extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    scanBloc.obtenerScans();
     return StreamBuilder<List<ScanModel>>(
       // future: DBProvider.db.getTodosScans(),
       stream: scanBloc.scansStream,
@@ -64,7 +63,7 @@ class MapasPages extends StatelessWidget {
             },
             child: ListTile(
               leading: Icon(
-                Icons.cloud_queue,
+                Icons.map_sharp,
                 color: Theme.of(context).primaryColor,
               ),
               title: Text(scans[i].valor),

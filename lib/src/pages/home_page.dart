@@ -86,8 +86,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   _scanQR(BuildContext context) async {
-    /*
-    ScanResult futureString = null;
+    ScanResult futureString;
 
     try {
       futureString = await BarcodeScanner.scan();
@@ -97,29 +96,20 @@ class _HomePageState extends State<HomePage> {
     // http://google.es
     // https://maps.google.com/local?q=38.36376322466995,-0.4383241540832672
 
-    String resultado = futureString.rawContent;
+    // String resultado = futureString.rawContent;
 
-    print('future string: $resultado');
-
-    if (futureString != null) {
-      print('Tenemos información');
-    }
-
-    */
-
-    String futureString =
-        'https://maps.google.com/local?q=38.36376322466995,-0.4383241540832672';
+    // String futureString ='https://maps.google.com/local?q=38.36376322466995,-0.4383241540832672';
 
     if (futureString != null) {
-      final scan = ScanModel(valor: futureString);
+      final scan = ScanModel(valor: futureString.rawContent);
 
       // DBProvider.db.nuevoScan(scan);
       scanBloc.agregarScan(scan);
 
-      final scan2 = ScanModel(valor: 'http://google.es');
+      // final scan2 = ScanModel(valor: 'http://google.es');
 
       // DBProvider.db.nuevoScan(scan);
-      scanBloc.agregarScan(scan2);
+      // scanBloc.agregarScan(scan2);
 
       if (Platform.isIOS) {
         Future.delayed(

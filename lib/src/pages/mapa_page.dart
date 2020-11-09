@@ -88,8 +88,6 @@ class _MapaPageState extends State<MapaPage> {
       child: Icon(Icons.repeat),
       backgroundColor: Theme.of(context).primaryColor,
       onPressed: () {
-        print('cambiando');
-
         if (tipoMapa == 'streets-v11') {
           tipoMapa = 'outdoors-v11';
         } else if (tipoMapa == 'outdoors-v11') {
