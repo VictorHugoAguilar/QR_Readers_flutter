@@ -7,8 +7,9 @@ La lectura de códigos podrán ser URLs, o Geoubicaciones que nos ubicarán en u
 
 ## Capturas
 
+![Preview página direcciones](https://github.com/VictorHugoAguilar/QR_Readers_flutter/blob/main/assets/img/PreviewPageDirecciones.png?raw=true)
 
-
+![Preview página mapas](https://github.com/VictorHugoAguilar/QR_Readers_flutter/blob/main/assets/img/PreviewPaginaMapas.png?raw=true)
 
 ## Depencencias utilizadas y configuraciones especificas
 
