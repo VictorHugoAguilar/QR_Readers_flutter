@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:qrreader/src/bloc/scan_bloc.dart';
 import 'package:qrreader/src/models/scan_model.dart';
@@ -6,6 +8,7 @@ import 'package:qrreader/src/pages/direcciones_page.dart';
 import 'package:qrreader/src/pages/mapas_page.dart';
 
 import 'package:barcode_scan/barcode_scan.dart';
+import 'package:qrreader/src/utils/utils.dart' as utils;
 
 class HomePage extends StatefulWidget {
   @override
@@ -23,7 +26,7 @@ class _HomePageState extends State<HomePage> {
       appBar: _crearAppBar(),
       bottomNavigationBar: _crearBottomNavigatorBar(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: _crearActionButton(),
+      floatingActionButton: _crearActionButton(context),
     );
     return scaffold;
   }
@@ -74,15 +77,15 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget _crearActionButton() {
+  Widget _crearActionButton(BuildContext context) {
     return FloatingActionButton(
       child: Icon(Icons.filter_center_focus),
       backgroundColor: Theme.of(context).primaryColor,
-      onPressed: _scanQR,
+      onPressed: () => _scanQR(context),
     );
   }
 
-  _scanQR() async {
+  _scanQR(BuildContext context) async {
     /*
     ScanResult futureString = null;
 
@@ -112,6 +115,22 @@ class _HomePageState extends State<HomePage> {
 
       // DBProvider.db.nuevoScan(scan);
       scanBloc.agregarScan(scan);
+
+      final scan2 = ScanModel(valor: 'http://google.es');
+
+      // DBProvider.db.nuevoScan(scan);
+      scanBloc.agregarScan(scan2);
+
+      if (Platform.isIOS) {
+        Future.delayed(
+          Duration(milliseconds: 750),
+          () {
+            utils.abrirScan(context, scan);
+          },
+        );
+      } else {
+        utils.abrirScan(context, scan);
+      }
     }
   }
 }

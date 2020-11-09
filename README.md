@@ -57,6 +57,13 @@ Until this is fixed in CocoaPods, you can add the following to your Podfile as a
      dependencies:
         url_launcher: ^5.7.10
     ````
+
+- [flutter_map: ^0.10.1+1](https://pub.dev/packages/flutter_map)
+
+    ````
+     dependencies:
+        flutter_map: ^0.10.1+1
+    ````
     
 
 ## Getting Started
